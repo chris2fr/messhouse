@@ -112,6 +112,11 @@
     };
   };
 
+  security.acme = {
+    acceptTerms = true;
+    defaults.email = "chris@mann.fr";
+  };
+
   systemd.services.django = {
     description = "Grore Django Website";
     after = [ "network.target" ];
