@@ -55,3 +55,18 @@ Successfully installed gunicorn-21.2.0 packaging-24.0
 
 
 ```
+
+
+Postgres
+
+```
+postgres=# GRANT CONNECT ON DATABASE grore to groreuser;
+postgres=# GRANT ALL ON SCHEMA public TO groreuser;
+postgres=# ALTER ROLE groreuser SET client_encoding TO 'utf8';
+postgres=# ALTER ROLE groreuser SET default_transaction_isolation TO 'read committed';
+postgres=# ALTER ROLE groreuser SET timezone TO 'UTC';
+postgres=# GRANT ALL PRIVILEGES ON DATABASE grore TO groreuser;
+postgres=# ALTER USER grore WITH PASSWORD 'asfhsofdzz';
+
+
+```
