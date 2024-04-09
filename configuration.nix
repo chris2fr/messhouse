@@ -137,8 +137,8 @@
   services.postgresql = {
     enable = true;
     ensureDatabases = [ "grore" ];
-    ensureUsers = [ "groreuser" ];
-    authentication = pkgs.lib.mkOverride 10 ''
+    ensureUsers = [ {name = "groreuser";} ];
+    authentication = pkgs.lib.mkForce ''
       #type database  DBuser  auth-method
       local all       all     trust
     '';
