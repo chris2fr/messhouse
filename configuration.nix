@@ -124,9 +124,9 @@
   #users.extraUsers.root.openssh.authorizedKeys.keys =
   #  [ "..." ];
 
-  # systemd.extraConfig = ''
-  #   DefaultTimeoutStartSec=900s
-  # '';
+  systemd.extraConfig = ''
+    DefaultTimeoutStartSec=900s
+  '';
 
   time.timeZone = "Europe/Amsterdam";
 
