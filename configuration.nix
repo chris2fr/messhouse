@@ -104,6 +104,7 @@
     virtualHosts = {
         "grore.resdigita.com" = {
             enableACME = true;
+            documentRoot = "/home/django/www";
             extraConfig = ''
             ProxyPass /.well-known !
             ProxyPass / http://127.0.0.1:8000/
