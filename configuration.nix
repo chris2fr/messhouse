@@ -151,7 +151,7 @@
 
   system.stateVersion = "23.11";
 
-  # networking.firewall.allowedTCPPorts = [ 22 25 80 443 143 587 993 995 636 8443 9443 ];
+  networking.firewall.allowedTCPPorts = [ 22 25 80 443 143 587 993 995 636 8443 9443 ];
 
   services.postgresql = {
     enable = true;
