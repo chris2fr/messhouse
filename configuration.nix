@@ -49,35 +49,35 @@
     python311Packages.pq
     python311Packages.aiosasl
     python311Packages.psycopg2
-    #bleach
-    #cffi
-    #chardet
-    #django
-    #django-formtools
-    #django-picklefield
-    #django-simple-captcha
-    #django-statici18n
-    #django-webpack-loader
-    #djangorestframework
-    future
-    gunicorn
-    markdown
-    mysqlclient
-    mysqlclient
-    openpyxl
-    pillow
-    pip
-    pycryptodome
-    pyjwt
-    pysaml2
-    python-dateutil
-    python-ldap
-    qrcode
-    requests
-    requests-oauthlib
-    setuptools
-    simplejson
-    python3-gnutls
+    python311Packages.bleach
+    python311Packages.cffi
+    python311Packages.chardet
+    python311Packages.django
+    python311Packages.django-formtools
+    python311Packages.django-picklefield
+    python311Packages.django-simple-captcha
+    python311Packages.django-statici18n
+    python311Packages.django-webpack-loader
+    python311Packages.djangorestframework
+    python311Packages.future
+    python311Packages.gunicorn
+    python311Packages.markdown
+    # python311Packages.mysqlclient
+    # python311Packages.mysqlclient
+    python311Packages.openpyxl
+    python311Packages.pillow
+    python311Packages.pip
+    python311Packages.pycryptodome
+    python311Packages.pyjwt
+    python311Packages.pysaml2
+    python311Packages.python-dateutil
+    python311Packages.python-ldap
+    python311Packages.qrcode
+    python311Packages.requests
+    python311Packages.requests-oauthlib
+    python311Packages.setuptools
+    python311Packages.simplejson
+    python311Packages.python3-gnutls
     python311Packages.gunicorn
     python311Packages.pip
     python311Packages.venvShellHook
