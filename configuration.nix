@@ -160,7 +160,11 @@
     authentication = pkgs.lib.mkForce ''
       #type database  DBuser  auth-method
       local all       all     trust
-      all   grore     groreuser trust
+      host   grore     groreuser ::1/128 trust
+      host   grore     groreuser 127.0.0.1/32 trust
+    '';
+    settings = ''
+    listen_addresses = '*'
     '';
 
   };
