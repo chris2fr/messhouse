@@ -99,8 +99,21 @@
     isNormalUser = true;
   };
 
+  services.httpd = {
+    enable = true;
+    virtualHosts = {
+        "grore.resdigita.com" = {
+            enableACME = true;
+            extraConfig = ''
+            ProxyPass /.well-known !
+            ProxyPass / http://127.0.0.1:8000/
+            '';
+        };
+    };
+  };
+
   systemd.services.django = {
-    description = "Les Grands Voisins Wagtail Website";
+    description = "Grore Django Website";
     after = [ "network.target" ];
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {

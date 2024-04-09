@@ -19,7 +19,7 @@ Python 3.11.8
     inet6 fe80::e0af:3aff:feed:7c10/64 scope link proto kernel_ll
        valid_lft forever preferred_lft forever
 
-```
+
 
 IP v4: 37.205.14.63
 
@@ -29,3 +29,29 @@ ssh django@37.205.14.63
 
 git clone https://www.github.com/SViarbitskya/grore-django-app
 
+source ./venv/bin/activate
+
+cd grore-django-app
+
+pip install -r requirements.txt
+
+git pull
+
+git branch origin develop
+
+[django@nixos:~]$ source venv/bin/activate
+(venv)
+[django@nixos:~]$ pip install gunicorn
+Collecting gunicorn
+  Downloading gunicorn-21.2.0-py3-none-any.whl.metadata (4.1 kB)
+Collecting packaging (from gunicorn)
+  Using cached packaging-24.0-py3-none-any.whl.metadata (3.2 kB)
+Downloading gunicorn-21.2.0-py3-none-any.whl (80 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 kB 3.8 MB/s eta 0:00:00
+Using cached packaging-24.0-py3-none-any.whl (53 kB)
+Installing collected packages: packaging, gunicorn
+Successfully installed gunicorn-21.2.0 packaging-24.0
+(venv)
+
+
+```
