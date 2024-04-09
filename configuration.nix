@@ -156,7 +156,8 @@
   services.postgresql = {
     enable = true;
     ensureDatabases = [ "grore" ];
-    ensureUsers = [ {name = "groreuser";} ];
+    ensureUsers = [ {name = "groreuser"; } 
+    {name = "grore"; ensureDBOwnership = true;} ];
     # authentication = pkgs.lib.mkForce ''
     #  #type database  DBuser  auth-method
     #  local all       all     trust
