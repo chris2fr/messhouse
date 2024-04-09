@@ -92,7 +92,7 @@
     postgresql_14
   ];
 
-  users.users.grore = {
+  users.users.django = {
     isNormalUser = true;
   };
 
