@@ -104,11 +104,19 @@
     virtualHosts = {
         "grore.resdigita.com" = {
             enableACME = true;
-            documentRoot = "/home/django/grore-django-app/images/static";
+            documentRoot = "/home/django/grore-django-app/images/static/";
+            
             extraConfig = ''
-            ProxyPass /.well-known !
-            ProxyPass /images/ !
-            ProxyPass / http://127.0.0.1:8000/
+                Alias /images /home/django/grore-django-app/images/static/images
+                <Directory "/home/django/grore-django-app/images/static/images">
+                    Options FollowSymLinks
+                    Require all granted
+                </Directory>
+                ProxyPass /.well-known !
+                ProxyPass /images/ !
+
+                ProxyPass / http://127.0.0.1:8000/
+                ProxyPassReverse / http://127.0.0.1:8000/
             '';
         };
     };
