@@ -160,6 +160,7 @@
     authentication = pkgs.lib.mkForce ''
       #type database  DBuser  auth-method
       local all       all     trust
+      all   grore     groreuser trust
     '';
 
   };
