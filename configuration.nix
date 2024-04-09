@@ -91,6 +91,8 @@
     gettext
     sqlite
     postgresql_14
+    apparmor-bin-utils
+
   ];
 
   users.users.django = {
@@ -132,6 +134,16 @@
 
   # networking.firewall.allowedTCPPorts = [ 22 25 80 443 143 587 993 995 636 8443 9443 ];
 
+  services.postgresql = {
+    enable = true;
+    ensureDatabases = [ "grore" ];
+    ensureUsers = [ "groreuser" ];
+    authentication = pkgs.lib.mkOverride 10 ''
+      #type database  DBuser  auth-method
+      local all       all     trust
+    '';
+
+  };
   
 
 }
