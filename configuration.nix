@@ -49,16 +49,16 @@
     python311Packages.pq
     python311Packages.aiosasl
     python311Packages.psycopg2
-    bleach
-    cffi
-    chardet
-    django
-    django-formtools
-    django-picklefield
-    django-simple-captcha
-    django-statici18n
-    django-webpack-loader
-    djangorestframework
+    #bleach
+    #cffi
+    #chardet
+    #django
+    #django-formtools
+    #django-picklefield
+    #django-simple-captcha
+    #django-statici18n
+    #django-webpack-loader
+    #djangorestframework
     future
     gunicorn
     markdown
@@ -93,7 +93,7 @@
   ];
 
   users.users.grore = {
-    isnormaluser = true;
+    isNormalUser = true;
   };
 
   systemd.services.django = {
@@ -127,8 +127,6 @@
   systemd.extraConfig = ''
     DefaultTimeoutStartSec=900s
   '';
-
-  time.timeZone = "Europe/Amsterdam";
 
   system.stateVersion = "23.11";
 
