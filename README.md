@@ -27,3 +27,5 @@ IP v6: 2a03:3b40:fe:7d7::1
 
 ssh django@37.205.14.63
 
+git clone https://www.github.com/SViarbitskya/grore-django-app
+
