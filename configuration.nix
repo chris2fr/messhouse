@@ -44,6 +44,7 @@
     dig
     killall
     pwgen
+    python311Full
     python311Packages.pypdf2
     python311Packages.python-ldap
     python311Packages.pq
