@@ -123,11 +123,11 @@
     after = [ "network.target" ];
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
-        WorkingDirectory = "/home/django/grore/";
+        WorkingDirectory = "/home/django/grore-django-app/";
         ExecStart = ''/home/django/venv/bin/gunicorn --env DJANGO_ENV='production' --access-logfile /home/django/access.log --error-logfile /home/django/error.log --chdir /home/django/grore-django-app --workers 12 --bind 127.0.0.1:8000 grore.wsgi:application'';
         Restart = "always";
         RestartSec = "10s";
-        User = "grore";
+        User = "django";
         Group = "users";
     };
     unitConfig = {
