@@ -105,11 +105,9 @@
         "grore.resdigita.com" = {
             enableACME = true;
             documentRoot = "/home/django/grore-django-app/images/static";
-
             extraConfig = ''
-
             ProxyPass /.well-known !
-            ProxyPass /images !
+            ProxyPass /images/ !
             ProxyPass / http://127.0.0.1:8000/
             '';
         };
