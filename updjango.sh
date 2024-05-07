@@ -1,4 +1,3 @@
-#!/bin/bash
 # Updates GRORE from Git Repostory in a pseudo production environement
 # Run as root
 iset -e
