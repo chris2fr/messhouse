@@ -100,20 +100,23 @@
   };
 
   services.httpd = {
+    user = "django";
+    group = "users";
     enable = true;
     virtualHosts = {
         "grore.resdigita.com" = {
             enableACME = true;
-            documentRoot = "/home/django/grore-django-app/images/static/";
-            
+            documentRoot = "/home/django/grore-django-app";
+            forceSSL = true;            
             extraConfig = ''
-                Alias /images /home/django/grore-django-app/images/static/images
-                <Directory "/home/django/grore-django-app/images/static/images">
+                <Directory "/home/django/grore-static-app">
                     Options FollowSymLinks
                     Require all granted
                 </Directory>
                 ProxyPass /.well-known !
-                ProxyPass /images/ !
+                ProxyPass /static/ !
+                ProxyPass /media/ !
+                ProxyPass /favicon.ico !
 
                 ProxyPass / http://127.0.0.1:8000/
                 ProxyPassReverse / http://127.0.0.1:8000/
